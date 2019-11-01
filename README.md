@@ -19,7 +19,7 @@ This project is deals with two services with api gateway service which is regist
 
 GET	http://localhost:8400/order-details-service/{cust_ID}/getOrders	Cust_id – provide customer id	Get the orders for provided customer id.
 
-POST	http://localhost:8400/order-service/{cust_id}/placeOrder	Cust_id – provide customer id,To add order to the customer ID
+POST	http://localhost:8400/order-service/{cust_id}/placeOrder	Cust_id – provide customer id,To add order to the customer ID.
 Request Body :-
         {
             "source_address": "Bankok",
