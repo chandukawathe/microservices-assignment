@@ -25,32 +25,32 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Order {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	long order_id;
+	private long order_id;
 
 	@Column(name = "source_address")
-	String source_address;
+	private String source_address;
 
 	@Column(name = "dest_address")
-	String dest_address;
+	private String dest_address;
 
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	@Column(name = "order_date")
 	@Temporal(TemporalType.DATE)
-	Date order_date;
+	private Date order_date;
 
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	@Column(name = "shipment_date")
 	@Temporal(TemporalType.DATE)
-	Date shipment_date;
+	private Date shipment_date;
 
 	@JsonIgnore
 	@ManyToOne()
 	@JoinColumn(referencedColumnName = "cust_id")
-	Customer customer;
+    private Customer customer;
 
 	@OneToMany(cascade = CascadeType.ALL)
 	@Column(name = "products")
-	List<Product> product;
+	private List<Product> product;
 
 	public Order() {
 		super();

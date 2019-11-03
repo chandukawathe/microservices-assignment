@@ -16,19 +16,19 @@ public class Customer {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	long cust_id;
+	private long cust_id;
 
 	@Column(name = "cust_name")
-	String cust_name;
+	private String cust_name;
 
 	@Column(name = "cust_email")
-	String cust_email;
+	private String cust_email;
 
 	@Column(name = "cust_address")
-	String cust_address;
+	private String cust_address;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "customer")
-	Set<Order> order = new HashSet<Order>();
+	private Set<Order> order = new HashSet<Order>();
 
 	public Customer() {
 		super();

@@ -12,18 +12,18 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Product {
 
 	@Id
-	long product_id;
+	private long product_id;
 
 	@Column(name = "Product_Name")
-	String product_name;
+	private String product_name;
 
 	@Column(name = "Product_Price")
-	double product_price;
+	private double product_price;
 
 	@JsonIgnore
 	@ManyToOne()
 	@JoinColumn(referencedColumnName = "order_id")
-	Order orders;
+	private Order orders;
 
 	public Product(long product_id, String product_name, double product_price, Order orders) {
 		super();
