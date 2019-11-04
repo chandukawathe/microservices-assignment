@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.LogisticShipment</groupId>
-	<artifactId>OrderService</artifactId>
+	<artifactId>order-details-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>OrderService</name>
+	<name>order-details-service</name>
 	<description>This project deals the placing order with respect to  JSON object </description>
 
 	<properties>
