@@ -26,11 +26,6 @@ import com.logistic.shipment.order.service.OrderService;
 public class OrderController {
 
 	@Autowired
-	OrderRepository orderRepository;
-	@Autowired
-	EntityManager entityManager;
-
-	@Autowired
 	OrderService orderedService;
 	
 	private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
@@ -56,12 +51,6 @@ public class OrderController {
 		return "Successfully created order with order ID : "+order_id;
 	}
 
-	@RequestMapping("/getOrders/{cust_id}")
-	public List<Order> getOrdersById(@PathVariable("cust_id") long cust_id) {
-		Customer customer = entityManager.find(Customer.class, cust_id);
-		List<Order> orderList = orderRepository.findByCustomer(customer);
-		//orderList.forEach(order -> System.out.println(order));
-		return orderList;
-	}
+	
 
 }
